@@ -370,7 +370,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: TargetMaterial
+  m_Name: AndroidMaterial
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -383,7 +383,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 3947b69d7fd64a2fb6c399c1cee597dd, type: 3}
+        m_Texture: {fileID: 2800000, guid: bb16b69564aa4ec8b0d6ac900caf259b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -532,6 +532,7 @@ GameObject:
   - component: {fileID: 735479197}
   - component: {fileID: 735479196}
   - component: {fileID: 735479195}
+  - component: {fileID: 735479200}
   m_Layer: 0
   m_Name: CapsuleTarget
   m_TagString: Untagged
@@ -574,7 +575,7 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 1343860996}
+  - {fileID: 1362264889}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -636,6 +637,19 @@ MonoBehaviour:
   mImageTargetType: 0
   mWidth: 1
   mHeight: 1
+--- !u!114 &735479200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 735479193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3f0702d572ef7f4cab744a014cf73b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetValue: 3
+  textBox: {fileID: 1082941716}
 --- !u!43 &851661636
 Mesh:
   m_ObjectHideFlags: 0
@@ -653,7 +667,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0, z: 0.35}
+      m_Extent: {x: 0.5, y: 0, z: 0.5}
   m_Shapes:
     vertices: []
     shapes: []
@@ -706,7 +720,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 000000bf000000003333b3be000000000000803f000000000000000000000000000000bf000000003333b33e000000000000803f00000000000000000000803f0000003f000000003333b3be000000000000803f000000000000803f000000000000003f000000003333b33e000000000000803f000000000000803f0000803f
+    _typelessdata: 000000bf00000000000000bf000000000000803f000000000000000000000000000000bf000000000000003f000000000000803f00000000000000000000803f0000003f00000000000000bf000000000000803f000000000000803f000000000000003f000000000000003f000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -939,7 +953,7 @@ GameObject:
   - component: {fileID: 1082941717}
   - component: {fileID: 1082941716}
   m_Layer: 5
-  m_Name: Text
+  m_Name: TextBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1002,7 +1016,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1082941714}
---- !u!21 &1343860996
+--- !u!21 &1362264889
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -1021,7 +1035,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: db94602f80c549a7aaa33bf4e7708540, type: 3}
+        m_Texture: {fileID: 2800000, guid: bf2104ca5845481687535d591f2b0173, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -1339,6 +1353,7 @@ GameObject:
   - component: {fileID: 1817602818}
   - component: {fileID: 1817602817}
   - component: {fileID: 1817602816}
+  - component: {fileID: 1817602821}
   m_Layer: 0
   m_Name: SphereTarget
   m_TagString: Untagged
@@ -1443,6 +1458,19 @@ MonoBehaviour:
   mImageTargetType: 0
   mWidth: 1
   mHeight: 1
+--- !u!114 &1817602821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1817602814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3f0702d572ef7f4cab744a014cf73b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetValue: 1
+  textBox: {fileID: 1082941716}
 --- !u!1 &1830671747
 GameObject:
   m_ObjectHideFlags: 0
@@ -1456,6 +1484,7 @@ GameObject:
   - component: {fileID: 1830671751}
   - component: {fileID: 1830671750}
   - component: {fileID: 1830671749}
+  - component: {fileID: 1830671754}
   m_Layer: 0
   m_Name: CubeTarget
   m_TagString: Untagged
@@ -1551,15 +1580,28 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: Target
+  mTrackableName: Android
   mPreserveChildSize: 0
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/Curso.xml
   mExtendedTracking: 0
-  mAspectRatio: 0.7
+  mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
-  mHeight: 0.7
+  mHeight: 1
+--- !u!114 &1830671754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1830671747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3f0702d572ef7f4cab744a014cf73b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetValue: 0
+  textBox: {fileID: 1082941716}
 --- !u!1 &1840532375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1573,6 +1615,7 @@ GameObject:
   - component: {fileID: 1840532379}
   - component: {fileID: 1840532378}
   - component: {fileID: 1840532377}
+  - component: {fileID: 1840532382}
   m_Layer: 0
   m_Name: CylinderTarget
   m_TagString: Untagged
@@ -1677,6 +1720,19 @@ MonoBehaviour:
   mImageTargetType: 0
   mWidth: 1
   mHeight: 0.58365756
+--- !u!114 &1840532382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1840532375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3f0702d572ef7f4cab744a014cf73b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetValue: 2
+  textBox: {fileID: 1082941716}
 --- !u!1 &1855167787
 GameObject:
   m_ObjectHideFlags: 0
